@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  <servlet>
+      <servlet-name>admin</servlet-name>
+      <servlet-class>servlet.admin_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>admin</servlet-name>
+      <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+      <servlet-name>kecheng</servlet-name>
+      <servlet-class>servlet.kecheng_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>kecheng</servlet-name>
+      <url-pattern>/kecheng</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+      <servlet-name>xuesheng</servlet-name>
+      <servlet-class>servlet.xuesheng_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>xuesheng</servlet-name>
+      <url-pattern>/xuesheng</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+      <servlet-name>jiangcheng</servlet-name>
+      <servlet-class>servlet.jiangcheng_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>jiangcheng</servlet-name>
+      <url-pattern>/jiangcheng</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>chengji</servlet-name>
+      <servlet-class>servlet.chengji_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>chengji</servlet-name>
+      <url-pattern>/chengji</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <servlet>
+      <servlet-name>liuyan</servlet-name>
+      <servlet-class>servlet.liuyan_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>liuyan</servlet-name>
+      <url-pattern>/liuyan</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>dwr-invoker</servlet-name>
+    <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>activeReverseAjaxEnabled</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>initApplicationScopeCreatorsAtStartup</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>maxWaitAfterWrite</param-name>
+      <param-value>500</param-value>
+    </init-param>
+    <init-param>
+    <param-name>crossDomainSessionSecurity</param-name>
+    <param-value>false</param-value>
+   </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>dwr-invoker</servlet-name>
+    <url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <filter>
+		<filter-name>setChartEncoding</filter-name>
+		<filter-class>util.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>setChartEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

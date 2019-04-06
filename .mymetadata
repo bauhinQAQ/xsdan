@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="xsdan"
+  id="myeclipse.1371551387034"
+  context-root="/xsdan"
+  j2ee-spec="5.0"
+  archive="xsdan.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
